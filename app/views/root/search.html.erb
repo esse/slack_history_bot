@@ -1,0 +1,6 @@
+<%= render :partial => 'links' %>
+<h3>Wiadomości</h3>
+
+<%= render :partial => 'messages', :locals => {:msg => @result.results} %>
+
+<%= will_paginate @result.results %>

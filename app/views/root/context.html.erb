@@ -1,0 +1,5 @@
+<%= render :partial => 'links' %>
+
+<%= render :partial => 'messages', :locals => {:msg => @older} %>
+<div style="background: yellow;"><%= render :partial => 'messages', :locals => {:msg => [@message]} %></div>
+<%= render :partial => 'messages', :locals => {:msg => @newer} %>

@@ -1,0 +1,8 @@
+<h1>Root#index</h1>
+
+<% if !current_user %>
+  <a href="/users/auth/slack">Zaloguj się przez slacka</a>
+<% else %>
+  <%= link_to 'Przejdź', logged_path %>
+<% end %>
+

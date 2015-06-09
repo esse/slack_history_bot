@@ -1,0 +1,7 @@
+Quite simple bot for Slack that records history and allow to search through it using SOLR with associated website (logging through slack).
+
+Look into config/initializers/a_vars.rb for env variables that needs to be set properly.
+
+Known issues:
+db in dev and production must be same
+

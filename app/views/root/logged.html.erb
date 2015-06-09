@@ -1,0 +1,14 @@
+<%= render :partial => 'links' %>
+
+<h1>Root#logged</h1>
+
+Kanały:
+<% @channels.each do |channel| %>
+<%= link_to "##{channel.value}", channel_path(:q => channel.uid) %> |
+<% end %>
+<br />
+<br />
+Użytkownicy:
+<% @users.each do |user| %>
+<%= link_to "#{user.value}", user_path(:q => user.uid) %> |
+<% end %>

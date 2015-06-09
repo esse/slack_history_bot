@@ -1,0 +1,9 @@
+<div id="facets">
+  <ul>
+    <% msg.each do |row| %>
+      <li>
+        #<%= link_to row.channel_h, channel_path(:q => row.channel) %> <%= link_to "<" + row.user_name + ">", user_path(:q => row.user) %> <%= row.message %> (<%= row.created_at.strftime("%Y-%m-%d %H:%m:%S") %>) <%= link_to '>>', context_path(:m_id => row.id)%>
+      </li>
+    <% end %>
+  </ul>
+</div>
