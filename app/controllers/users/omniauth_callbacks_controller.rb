@@ -1,7 +1,7 @@
 class Users::OmniauthCallbacksController < Devise::OmniauthCallbacksController
   def slack
     if request.env["omniauth.auth"].info.team != "Avangarda"
-      flash['error'] = 'Wolno logować się tylko z Avy!'
+      flash['error'] = "You need to login using #{ALLOWED_TEAM_NAME} team account"
       redirect_to '/'
       return
     end
